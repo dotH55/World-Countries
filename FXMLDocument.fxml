@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3465045592705167" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="worldcountries.FXMLDocumentController">
+   <items>
+      <AnchorPane prefHeight="423.0" prefWidth="272.0" style="-fx-background-color: #3f3f3f;">
+         <children>
+            <MenuBar prefHeight="30.0" prefWidth="338.0" stylesheets="@Style.css">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="editBt" mnemonicParsing="false" onAction="#Edit">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Edit_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="doneMi" mnemonicParsing="false" onAction="#doneEdit">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Save_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="closeBt" mnemonicParsing="false" onAction="#ExitApp">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Quit_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0">
+                           <image>
+                              <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/File_Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                <Menu fx:id="modeMb" mnemonicParsing="false" text="Mode">
+                  <items>
+                    <MenuItem fx:id="freeModeBt" mnemonicParsing="false" onAction="#FreeMode">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/FreeMode_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="countryBt" mnemonicParsing="false" onAction="#Country">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Country_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="capitalBt" mnemonicParsing="false" onAction="#Capital">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Capital_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="flagBt" mnemonicParsing="false" onAction="#Flag">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Flag_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Mode_Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                  <Menu fx:id="continentMb" mnemonicParsing="false" text="Continent">
+                    <items>
+                      <MenuItem fx:id="AllBt" mnemonicParsing="false" onAction="#allContinents">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/World_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="AfricaBt" mnemonicParsing="false" onAction="#Africa">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Africa_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="AmericaBt" mnemonicParsing="false" onAction="#America">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/America_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="AmericanStatesBt" mnemonicParsing="false" onAction="#AmericanStates">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Georgia_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="AsiaBt" mnemonicParsing="false" onAction="#Asia">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/China_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="EuropeBt" mnemonicParsing="false" onAction="#Europe">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Europe_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="OceniaBt" mnemonicParsing="false" onAction="#Ocenia">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Oceania_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0">
+                           <image>
+                              <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Continent_Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Theme">
+                  <items>
+                    <MenuItem fx:id="darkBt" mnemonicParsing="false" onAction="#Dark">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/DarkMode_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="lightBt" mnemonicParsing="false" onAction="#Light">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/LightMode_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <CheckMenuItem fx:id="soundBt" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0">
+                                 <image>
+                                    <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Sound.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></CheckMenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0">
+                           <image>
+                              <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/WorldCountries/Resources/Theme_Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <VBox fx:id="Vbox" alignment="TOP_CENTER" layoutX="-11.0" layoutY="24.0" prefHeight="407.0" prefWidth="350.0" spacing="25.0" style="-fx-alignment: CENTER; -fx-background-color: #3f3f3f;">
+               <children>
+                  <ImageView fx:id="FlagImg" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#Hint" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Flags%20Ultra/al.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="countryTf" alignment="CENTER" onAction="#NextFrCountry" promptText="Country" style="-fx-background-color: #D3D3D3; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="capitalTf" alignment="CENTER" onAction="#NextFrCapital" promptText="Capital" style="-fx-background-color: #D3D3D3; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <HBox prefHeight="39.0" prefWidth="263.0" spacing="20.0" style="-fx-alignment: CENTER;">
+                     <children>
+                        <Button fx:id="saveBt" mnemonicParsing="false" onAction="#Save" prefHeight="24.0" prefWidth="67.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #E45652;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteBt" mnemonicParsing="false" onAction="#Delete" prefHeight="24.0" prefWidth="67.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #E45652;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="PreviousBt" mnemonicParsing="false" onAction="#Previous" prefHeight="24.0" prefWidth="67.0" style="-fx-background-radius: 20; -fx-border-image-width: 20; -fx-background-color: #E45652;" text="&lt;-" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="nextBt" mnemonicParsing="false" onAction="#Next" prefHeight="24.0" prefWidth="67.0" style="-fx-background-radius: 20; -fx-border-image-width: 20; -fx-background-color: #E45652;" text="-&gt;" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="232.0" style="-fx-alignment: LEFT;">
+                     <children>
+                        <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="145.0" progress="0.0" style="-fx-region-background: #E45652;" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2A2E30;">
+         <content>
+            <AnchorPane style="-fx-background-color: #3f3f3f;">
+               <children>
+                  <ImageView fx:id="mapImg" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@WorldMap.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="markerImg" fitHeight="30.0" fitWidth="37.0" layoutX="94.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Marker.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </items>
+</SplitPane>
